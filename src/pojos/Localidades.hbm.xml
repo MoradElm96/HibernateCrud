@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-jun-2022 21:53:48 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Localidades" table="localidades" catalog="geografia" optimistic-lock="version">
+        <id name="codLoc" type="string">
+            <column name="CodLoc" length="4" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="30" not-null="true" />
+        </property>
+        <property name="censo" type="java.lang.Integer">
+            <column name="Censo" />
+        </property>
+        <property name="habitantes" type="java.lang.Integer">
+            <column name="Habitantes" />
+        </property>
+        <property name="nomProv" type="string">
+            <column name="NomProv" length="25" />
+        </property>
+    </class>
+</hibernate-mapping>
